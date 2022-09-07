@@ -1,0 +1,153 @@
+/*
+class Personel
+{
+    constructor(ad,soyad,id)
+    {
+        this.pad=ad;
+        this.psoyad=soyad;
+        this.pid=id;
+    }
+}
+*/
+/*
+
+function Personel(ad,soyad,id)
+{
+    this.pad=ad;
+    this.psoyad=soyad;
+    this.pid=id;
+}
+var personel=new Personel("Akın","Gören",1);
+*/
+/*
+var personel={
+    padi:"ahmet",
+    psoyadi:"hakan",
+    pid:1
+};
+console.log(personel);
+*/
+/*
+1.yol:
+var {padi:okuadi}=personel;
+console.log(okuadi);
+
+2.yol:
+var okuadi=personel.padi;
+console.log(okuadi);
+
+3.yol:
+var {padi}=personel;
+console.log(padi);
+*/
+
+/*
+var yazarlar=[
+    {
+        yazaradi:"OSHO",
+        kitabi:["Meditasyon","İçindeki Potansiyeli Keşfet","Sır"],
+    },
+    {
+        yazaradi:"Doğan CÜCELOĞLU",
+        kitabi:"İnsan İnsana"
+    },
+    {
+        yazaradi:"Marlo Morgan",
+        kitabi:"Bir Çift Yürek"
+    }
+];
+for(var {yazaradi} of yazarlar)
+{
+    console.log(yazaradi);
+}
+
+*/
+
+/*
+const soru1={
+    soru1:"Aşağıdakilerden hangisi Doğan CÜCELOĞLU kitabıdır?",
+    cevap1:"İnsan İnsana"
+};
+
+const soru2={
+    soru2:"Aşağıdakilerden hangisi OSHO kitabıdır?",
+    cevap2:"Meditasyon"
+};
+
+const sorular={...soru1, ...soru2};
+console.log(sorular);
+
+*/
+/*
+const soru1={
+    soru1:"Aşağıdakilerden hangisi Doğan CÜCELOĞLU kitabıdır?",
+    cevap1:"İnsan İnsana"
+};
+const {soru1:alinansoru1, ...yeniobje}=soru1;
+console.log(alinansoru1);
+console.log(yeniobje);
+*/
+
+/*
+const soru1={
+    soru1:"Aşağıdakilerden hangisi Doğan CÜCELOĞLU kitabıdır?",
+    cevap1:"İnsan İnsana"
+};
+//console.log(soru1);
+//console.log(Object.keys(soru1));
+//console.log(Object.values(soru1));
+console.log(Object.entries(soru1));
+*/
+
+/*
+class Personel
+{
+    constructor(ad,soyad,id)
+    {
+        this.pad=ad;
+        this.psoyad=soyad;
+        this.pid=id;
+    }
+    static bilgi="varsayılan personel";
+    static bilgigetir()
+    {
+        console.log(this.bilgi);
+    }
+}
+
+var personel1=new Personel("Akın","Gören","10");
+console.log(Personel.bilgi);
+console.log(Personel.bilgigetir());
+console.log(personel1.pad);
+
+class KopyaPersonel extends Personel{};
+var personel2=new KopyaPersonel("Akın","Gören",10);
+console.log(personel2);
+*/
+
+/*
+class Personel
+{
+    constructor(ad,soyad,id)
+    {
+        this.pad=ad;
+        this.psoyad=soyad;
+        this.pid=id;
+    }
+    static bilgi="varsayılan personel";
+    static bilgigetir()
+    {
+        console.log(this.bilgi);
+    }
+}
+class KopyaPersonel extends Personel{
+    constructor(ad,soyad,id)
+    {
+        super(ad,soyad,id);
+        this.unvan="görevli";
+    }
+};
+
+var personel2=new KopyaPersonel("Akın","Gören",10);
+console.log(personel2.pad);
+*/

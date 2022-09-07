@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="margin-top:10px">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Organ Bağışı Kayıt Formu</h4>
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>(Zorunlu Alan)</p>
+                        <div class="input-group">
+                            <span class="input-group-text">Ad ve Soyad </span>
+                            <input type="text" aria-label="First name" id="ad" class="form-control">
+                            <input type="text" aria-label="Last name" id="soyad" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Kan Grubu</p>
+                        <select id="KanGrubu">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="0">0</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Bilinen alerjiniz var mı? Evet ise, lütfen aşağıda belirtin.</p>
+                        <textarea class="form-control" id="AlerjiDurumu" rows="3"></textarea>
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Onay ve Şartlar (Zorunlu Alan)</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <label class="form-check-label" for="flexCheckDefault" id="checkLabel">
+                                Bu belgede verdiğim bilgilerin doğru ve gerçek olduğunu onaylıyorum.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <label class="form-check-label" for="flexCheckChecked" id="checkLabel">
+                                Organlarımın tıbbi nakil veya eğitim/araştırma amacıyla bağışlanmasına izin veriyorum.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <label class="form-check-label" for="flexCheckDefault" id="checkLabel">
+                                Bu kayıt hakkında ailemi bilgilendirmem gerektiğini kabul ediyorum.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <label class="form-check-label" for="flexCheckChecked" id="checkLabel">
+                                Organ bağış kartını ve onunla birlikte gelen belgeyi her zaman saklamam gerektiğini
+                                onaylarım.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <label class="form-check-label" for="flexCheckDefault" id="checkLabel">
+                                Bilgilerimin bağışçı siciline gönderilmesine izin veriyorum.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <p>Cinsiyet </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Erkek
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Kadın
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                </hr>
+                <div class="row" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <button type="button" id="Gonder" class="btn btn-primary">
+                            Gönder
+                        </button>
+                    </div>
+                </div>
+                <div class="row" id="okey" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <div class="alert alert-info" role="alert">
+                            Gönderildi
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="uyari" style="margin-top:10px">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" id=role="alert">
+                            Lütfen Zorunlu Kısımları Doldurunuz
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
